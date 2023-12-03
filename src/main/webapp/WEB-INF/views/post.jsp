@@ -37,7 +37,9 @@
             if(a) location.href='deleteok/' + id;
         }
 
-
+        function redirectToViewPage(id) {
+            location.href = 'view/' + id;
+        }
     </script>
 </head>
 <body>

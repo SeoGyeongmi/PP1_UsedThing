@@ -55,7 +55,7 @@
 
 <h1>Edit Post</h1>
 
-<form:form commandName="boardVO" method="POST" action="editok">
+<form:form commandName="u" method="POST" action="editok">
     <form:hidden path="seq"/>
     <table id="edit">
         <tr>
