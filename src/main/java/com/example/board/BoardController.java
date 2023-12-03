@@ -24,7 +24,7 @@ public class BoardController {
         return "addform";
     }
 
-    @RequestMapping(value = "/add/addok", method = RequestMethod.POST)
+    @RequestMapping(value = "/addok", method = RequestMethod.POST)
     public String addPostOK(BoardVO vo) {
 
         if(boardService.insertBoard(vo) == 0)
@@ -48,7 +48,7 @@ public class BoardController {
             System.out.println("데이터 수정 실패 ");
         else
             System.out.println("데이터 수정 성공!!!");
-        return "redirect:list";
+        return "redirect:/";
     }
 
     @RequestMapping(value = "/deleteok/{id}", method = RequestMethod.GET)

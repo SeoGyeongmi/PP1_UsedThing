@@ -55,7 +55,7 @@
 
 <h1>Edit Post</h1>
 
-<form:form commandName="boardVO" method="POST" action="../editok">
+<form:form commandName="boardVO" method="POST" action="editok">
     <form:hidden path="seq"/>
     <table id="edit">
         <tr>
@@ -74,8 +74,8 @@
         <tr><td>Writer:</td><td><input type="text" name="writer"/></td></tr>
         <tr><td>Content:</td><td><textarea cols="50" rows="5" name="content"></textarea></td></tr>
     </table>
-    <button type="submit">등록하기</button>
-    <button type="button">취소하기</button>
+    <input type="submit" value="수정하기"/>
+    <input type="button" value="취소하기" onclick="history.back()"/>
 </form:form>
 
 </body>
