@@ -1,5 +1,6 @@
 package com.example.board;
 
+import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -13,7 +14,7 @@ import java.util.List;
 public class BoardDAO {
 
     @Autowired
-    private JdbcTemplate jdbcTemplate;
+    SqlSession sqlSession;
 
     class BoardRowMapper implements RowMapper<BoardVO> {
         @Override
@@ -32,27 +33,32 @@ public class BoardDAO {
     }
 
     public int insertBoard(BoardVO vo) {
-        String sql = "INSERT INTO BOARD (category, title, writer, content) VALUES (?, ?, ?, ?)";
-        return jdbcTemplate.update(sql, vo.getCategory(), vo.getTitle(), vo.getWriter(), vo.getContent());
+        System.out.println("insertBoard");
+        int result = sqlSession.insert("BoardDAO.insertBoard", vo);
+        return result;
     }
 
     public int deleteBoard(int seq) {
-        String sql = "DELETE FROM BOARD WHERE seq=?";
-        return jdbcTemplate.update(sql, seq);
+        System.out.println("deleteBoard");
+        int result = sqlSession.delete("BoardDAO.deleteBoard", seq);
+        return result;
     }
 
     public int updateBoard(BoardVO vo) {
-        String sql = "UPDATE BOARD SET category=?, title=?, writer=?, content=?, editdate=? WHERE seq=?";
-        return jdbcTemplate.update(sql, vo.getCategory(), vo.getTitle(), vo.getWriter(), vo.getContent(), vo.getEditdate(), vo.getSeq());
+        System.out.println("updateBoard");
+        int result = sqlSession.update("BoardDAO.updateBoard", vo);
+        return result;
     }
 
     public BoardVO getBoard(int seq) {
-        String sql = "SELECT * FROM BOARD WHERE seq=?";
-        return jdbcTemplate.queryForObject(sql, new Object[]{seq}, new BoardRowMapper());
+        System.out.println("getBoard");
+        BoardVO boardVO = sqlSession.selectOne("BoardDAO.getBoard", seq);
+        return boardVO;
     }
 
     public List<BoardVO> getBoardList() {
-        String sql = "SELECT * FROM BOARD ORDER BY seq DESC";
-        return jdbcTemplate.query(sql, new BoardRowMapper());
+        System.out.println("getBoardList");
+        List<BoardVO> list = sqlSession.selectList("BoardDAO.getBoardList");
+        return list;
     }
 }
