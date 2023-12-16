@@ -2,21 +2,15 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="SpringBoradCRUD2:war exploded" />
+      <artifact name="MyBatis:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64366c19-62f1-4f9f-ba6d-487052cbc839" name="Changes" comment="view.jsp 추가">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/board-mapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+    <list default="true" id="64366c19-62f1-4f9f-ba6d-487052cbc839" name="Changes" comment="mybatis로 CRUD 성공냥">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/board/BoardDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/board/BoardDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/post.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/post.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +73,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/seogyeongmi/PP1/SpringBoradCRUD 복사본&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/seogyeongmi/IdeaProjects/MyBatis_CRUD&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -124,14 +118,14 @@
     <configuration name="Tomcat 9.0.82" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.82" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="MyBatis:war exploded">
+        <artifact name="UsedThing:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/MyBatis_war_exploded" />
+            <option name="CONTEXT_PATH" value="/UsedThing_war_exploded" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="5985060b-b297-4831-ae84-ce04b0c7dc89" />
+        <option name="BASE_DIRECTORY_NAME" value="b0f1d518-e396-43db-9c3a-7ebcd701cee2" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -139,7 +133,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="52569" />
+        <option name="DEBUG_PORT" value="52988" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -204,7 +198,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="MyBatis:war exploded" />
+          <artifact name="UsedThing:war exploded" />
         </option>
       </method>
     </configuration>
@@ -232,6 +226,8 @@
       <workItem from="1701760660183" duration="352000" />
       <workItem from="1701761017642" duration="3999000" />
       <workItem from="1702652749591" duration="1986000" />
+      <workItem from="1702733352908" duration="399000" />
+      <workItem from="1702733761576" duration="773000" />
     </task>
     <task id="LOCAL-00001" summary="first init">
       <option name="closed" value="true" />
@@ -329,7 +325,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701607286460</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="mybatis로 CRUD 성공냥">
+      <option name="closed" value="true" />
+      <created>1702733526722</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1702733526722</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,7 +362,8 @@
     <MESSAGE value="add post" />
     <MESSAGE value="edit 구현 X" />
     <MESSAGE value="view.jsp 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="view.jsp 추가" />
+    <MESSAGE value="mybatis로 CRUD 성공냥" />
+    <option name="LAST_COMMIT_MESSAGE" value="mybatis로 CRUD 성공냥" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
