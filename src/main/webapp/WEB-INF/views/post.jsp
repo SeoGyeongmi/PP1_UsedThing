@@ -1,78 +1,38 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: seogyeongmi
-  Date: 11/30/23
-  Time: 3:23 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>자유게시판</title>
-    <style>
-        #list {
-            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        }
-        #list td, #list th {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align:center;
-        }
-        #list tr:nth-child(even){background-color: #f2f2f2;}
-        #list tr:hover {background-color: #ddd;}
-        #list th {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            text-align: center;
-            background-color: #006bb3;
-            color: white;
-        }
-    </style>
-        <script>
-        function delete_ok(id){
-            var a = confirm("정말로 삭제하겠습니까?");
-            if(a) location.href='deleteok/' + id;
-            else location.href='/'
-        }
-
-        function redirectToViewPage(id) {
-            location.href = 'view/' + id;
-        }
-    </script>
+    <title>Main Page</title>
 </head>
 <body>
-<h1>자유게시판</h1>
-<table id="list">
-    <tr>
-        <th>Id</th>
-        <th>Category</th>
-        <th>Title</th>
-        <th>Writer</th>
-        <th>Content</th>
-        <th>Regdate</th>
-        <th>Editdate</th>
-        <th>Edit</th>
-        <th>Delete</th>
-    </tr>
 
-    <c:forEach items="${list}" var="u">
-        <tr onclick="redirectToViewPage('${u.getSeq()}')">
-            <td>${u.getSeq()}</td>
-            <td>${u.getCategory()}</td>
-            <td>${u.getTitle()}</td>
-            <td>${u.getWriter()}</td>
-            <td>${u.getContent()}</td>
-            <td>${u.getRegdate()}</td>
-            <td>${u.getEditdate()}</td>
-            <td><a href="editform/${u.getSeq()}">Edit</a></td>
-            <td><a href="javascript:delete_ok('${u.getSeq()}')">Delete</a></td>
-        </tr>
-    </c:forEach>
+<h1>Main Page</h1>
+
+<table border="1">
+    <tr>
+        <th>Item ID</th>
+        <th>Seller Name</th>
+        <th>Item Name</th>
+        <th>Price</th>
+        <th>Condition</th>
+        <th>Content</th>
+        <th>How to Sell</th>
+        <th>Phone</th>
+        <th>Registration Date</th>
+    </tr>
+    <tr>
+        <td>${BoardVO.getItemID}</td>
+        <td>${BoardVO.getSellerNAME}</td>
+        <td>${boardVO.getItemNAME}</td>
+        <td>${boardVO.getPrice}</td>
+        <td>${boardVO.getCondi}</td>
+        <td>${boardVO.getContent}</td>
+        <td>${boardVO.getCowToSell}</td>
+        <td>${boardVO.getPhone}</td>
+        <td>${boardVO.getRegDate}</td>
+    </tr>
 </table>
 
-<br/><a href="add/">Add New Post</a>
 </body>
 </html>

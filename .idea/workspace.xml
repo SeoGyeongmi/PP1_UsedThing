@@ -9,11 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64366c19-62f1-4f9f-ba6d-487052cbc839" name="Changes" comment="board-mapper.xml 수정 DB 새로 연결">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="64366c19-62f1-4f9f-ba6d-487052cbc839" name="Changes" comment="BoardDAO BoardVO 변경 완료">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/user/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/user/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/user/UserVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/user-mapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/board/BoardDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/board/BoardDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/board/BoardVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/board/BoardVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/post.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/post.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,13 +27,14 @@
       <list>
         <option value="Interface" />
         <option value="package-info" />
-        <option value="Class" />
         <option value="Jsp File" />
         <option value="spring-beans.schema" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <branch-grouping />
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
         <option value="https://github.com/didqnrb1/crud.git" />
@@ -85,7 +88,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;d50c9d6423228c64ae67255b0ef3a317&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;c1c895d03c26aca36b1d44e00743200d&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -128,7 +131,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="a0f278ad-6224-4fa0-b435-22cdc9fde759" />
+        <option name="BASE_DIRECTORY_NAME" value="09a0d6d6-be9e-46ae-af44-7ee27ef18442" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -136,7 +139,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="51183" />
+        <option name="DEBUG_PORT" value="53009" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -233,6 +236,8 @@
       <workItem from="1702733761576" duration="773000" />
       <workItem from="1702734982654" duration="3157000" />
       <workItem from="1702786359774" duration="1015000" />
+      <workItem from="1702787450540" duration="1390000" />
+      <workItem from="1702789435112" duration="1050000" />
     </task>
     <task id="LOCAL-00001" summary="first init">
       <option name="closed" value="true" />
@@ -354,7 +359,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702738119434</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="BoardDAO BoardVO 변경 완료">
+      <option name="closed" value="true" />
+      <created>1702787497901</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1702787497901</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,7 +399,8 @@
     <MESSAGE value="mybatis로 CRUD 성공냥" />
     <MESSAGE value="usedthing 크게시작,빵빠레 불면서 시작" />
     <MESSAGE value="board-mapper.xml 수정 DB 새로 연결" />
-    <option name="LAST_COMMIT_MESSAGE" value="board-mapper.xml 수정 DB 새로 연결" />
+    <MESSAGE value="BoardDAO BoardVO 변경 완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="BoardDAO BoardVO 변경 완료" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
