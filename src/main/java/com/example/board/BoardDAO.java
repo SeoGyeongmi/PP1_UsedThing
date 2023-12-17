@@ -20,11 +20,11 @@ public class BoardDAO {
         @Override
         public BoardVO mapRow(ResultSet rs, int rowNum) throws SQLException {
             BoardVO vo = new BoardVO();
-            vo.setItemID(rs.getInt("ItemID"));
-            vo.setSellerNAME(rs.getString("sellerNAME"));
-            vo.setItemNAME(rs.getString("ItemNAME"));
+            vo.setItemID(rs.getInt("itemID"));
+            vo.setSellerName(rs.getString("sellerName"));
+            vo.setItemName(rs.getString("itemName"));
             vo.setPrice(rs.getInt("price"));
-            vo.setCondi(rs.getString("Condi"));
+            vo.setCondi(rs.getString("condi"));
             vo.setContent(rs.getString("content"));
             vo.setHowToSell(rs.getString("howToSell"));
             vo.setPhone(rs.getString("phone"));

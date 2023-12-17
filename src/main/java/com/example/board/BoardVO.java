@@ -8,8 +8,8 @@ public class BoardVO {
 
 
     private int itemID;
-    private String sellerNAME;
-    private String itemNAME;
+    private String sellerName;
+    private String itemName;
     private int price;
     private String condi;
     private String content;
@@ -24,20 +24,20 @@ public class BoardVO {
         this.itemID = itemID;
     }
 
-    public String getSellerNAME() {
-        return sellerNAME;
+    public String getSellerName() {
+        return sellerName;
     }
 
-    public void setSellerNAME(String sellerNAME) {
-        this.sellerNAME = sellerNAME;
+    public void setSellerName(String sellerName) {
+        this.sellerName = sellerName;
     }
 
-    public String getItemNAME() {
-        return itemNAME;
+    public String getItemName() {
+        return itemName;
     }
 
-    public void setItemNAME(String itemNAME) {
-        this.itemNAME = itemNAME;
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
     }
 
     public int getPrice() {
