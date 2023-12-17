@@ -5,56 +5,85 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 
 public class BoardVO {
-    private int seq;
-    private String category;
-    private String title;
-    private String writer;
+
+
+    private int itemID;
+    private String sellerNAME;
+    private String itemNAME;
+    private int price;
+    private String condi;
     private String content;
-    private Date regdate;
-    private Date editdate;
-    private int cnt;
+    private String howToSell;
+    private String phone;
+    private Date RegDate;
+    public int getItemID() {
+        return itemID;
+    }
 
+    public void setItemID(int itemID) {
+        this.itemID = itemID;
+    }
 
-    public int getSeq() {
-        return seq;
+    public String getSellerNAME() {
+        return sellerNAME;
     }
-    public void setSeq(int seq) {
-        this.seq = seq;
+
+    public void setSellerNAME(String sellerNAME) {
+        this.sellerNAME = sellerNAME;
     }
-    public String getCategory() { return category; }
-    public void setCategory(String category) { this.category = category; }
-    public String getTitle() {
-        return title;
+
+    public String getItemNAME() {
+        return itemNAME;
     }
-    public void setTitle(String title) {
-        this.title = title;
+
+    public void setItemNAME(String itemNAME) {
+        this.itemNAME = itemNAME;
     }
-    public String getWriter() {
-        return writer;
+
+    public int getPrice() {
+        return price;
     }
-    public void setWriter(String writer) {
-        this.writer = writer;
+
+    public void setPrice(int price) {
+        this.price = price;
     }
+
+    public String getCondi() {
+        return condi;
+    }
+
+    public void setCondi(String condi) {
+        this.condi = condi;
+    }
+
     public String getContent() {
         return content;
     }
+
     public void setContent(String content) {
         this.content = content;
     }
-    public Date getRegdate() {
-        return regdate;
+
+    public String getHowToSell() {
+        return howToSell;
     }
-    public void setRegdate(Date regdate) {
-        this.regdate = regdate;
+
+    public void setHowToSell(String howToSell) {
+        this.howToSell = howToSell;
     }
-    public Date getEditdate() { return editdate; }
-    public void setEditdate(Date editdate) {
-        this.editdate = editdate;
+
+    public String getPhone() {
+        return phone;
     }
-    public int getCnt() {
-        return cnt;
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
-    public void setCnt(int cnt) {
-        this.cnt = cnt;
+
+    public void setRegDate(Date regDate) {
+        RegDate = regDate;
     }
+
+
+
 }
