@@ -67,17 +67,23 @@
 
 <form action="../addok" method="post" accept-charset="UTF-8">
     <table>
-        <tr><td>Category:</td><td>
-            <input list="category" name="category">
-            <datalist id="category">
-                <option value="메모">
-                <option value="자기계발">
-                <option value="독서">
-                <option value="할 일">
+        <tr><td>Seller Name:</td><td><input type="text" name="sellerName"/></td></tr>
+        <tr><td>Item Name:</td><td><input type="text" name="itemName"/></td></tr>
+        <tr><td>Price:</td><td><input type="number" id="price" name="price" min="0" max="10000000" step="10000" value="0"></td></tr>
+        <tr><td>Condition:</td><td>
+            <input list="condi" name="condi">
+            <datalist id="condi">
+                <option value="상">
+                <option value="중">
+                <option value="하">
             </datalist></td></tr>
-        <tr><td>Title:</td><td><input type="text" name="title"/></td></tr>
-        <tr><td>Writer:</td><td><input type="text" name="writer"/></td></tr>
-        <tr><td>Content:</td><td><textarea cols="50" rows="5" name="content"></textarea></td></tr>
+        <tr><td>Content:</td><td><textarea name="content" rows="10" cols="30"></textarea></td></tr>
+        <tr><td>How To Sell:</td><td>
+        <input type="radio" id="direct" name="howToSell" value="직거래">
+        <label for="direct">직거래</label><br>
+        <input type="radio" id="package" name="howToSell" value="택배거래">
+        <label for="package">택배</label><br></td></tr>
+        <tr><td>Phone Number:</td><td><input type="text" name="phone"/></td></tr>
     </table>
     <button type="submit">등록하기</button>
 </form>

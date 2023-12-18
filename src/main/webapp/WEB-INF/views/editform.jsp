@@ -56,7 +56,7 @@
 <h1>Edit Post</h1>
 
 <form:form commandName="u" method="POST" action="editok">
-    <form:hidden path="seq"/>
+    <form:hidden path="itemID"/>
     <table id="edit">
         <tr>
             <td>Category:</td>

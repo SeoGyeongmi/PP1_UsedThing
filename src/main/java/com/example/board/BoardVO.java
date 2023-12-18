@@ -16,6 +16,7 @@ public class BoardVO {
     private String howToSell;
     private String phone;
     private Date RegDate;
+
     public int getItemID() {
         return itemID;
     }
@@ -78,6 +79,10 @@ public class BoardVO {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public Date getRegdate() {
+        return this.RegDate;
     }
 
     public void setRegDate(Date regDate) {

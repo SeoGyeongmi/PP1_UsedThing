@@ -26,7 +26,7 @@ public class BoardController {
 
     @RequestMapping(value = "/addok", method = RequestMethod.POST)
     public String addPostOK(BoardVO vo) {
-
+        System.out.println("sellerName : " + vo.getSellerName());
         if(boardService.insertBoard(vo) == 0)
             System.out.println("데이터 추가 실패 ");
         else

@@ -4,12 +4,12 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="BoardDAO">
     <insert id="insertBoard">
-        insert into Items (itemName, price, condi, content, howToSell, phone)
-        values(#{itemName}, #{price}, #{condi}, #{content}, #{howToSell}, #{phone})
+        insert into Items (sellerName, itemName, price, condi, content, howToSell, phone)
+        values(#{sellerName}, #{itemName}, #{price}, #{condi}, #{content}, #{howToSell}, #{phone})
     </insert>
     <update id="updateBoard">
         update Items
-        set itemName=#{itemName}, price=#{price}, condi=#{condi}, content=#{content}, howToSell=#{howToSell}, phone=#{phone}
+        set sellerName=#{sellerName}, itemName=#{itemName}, price=#{price}, condi=#{condi}, content=#{content}, howToSell=#{howToSell}, phone=#{phone}
         where itemID=#{itemID}
     </update>
     <delete id="deleteBoard">

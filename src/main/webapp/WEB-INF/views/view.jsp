@@ -14,12 +14,13 @@
 <body>
 <spring:eval expression="u" var="boardVO" />
 <tr>
-    <td>Category: ${u.getCategory()} <br><br></td>
-    <td>Title: ${u.getTitle()} <br><br></td>
-    <td>Writer: ${u.getWriter()} <br><br></td>
+    <td>Seller Name: ${u.getSellerName()} <br><br></td>
+    <td>Item Name: ${u.getItemName()} <br><br></td>
+    <td>Price: ${u.getPrice()} <br><br></td>
+    <td>Condition: ${u.getCondi()} <br><br></td>
     <td>Content: ${u.getContent()} <br><br></td>
+    <td>How To Sell: ${u.getHowToSell()} <br><br></td>
     <td>생성된 날짜: ${u.getRegdate()} <br></td>
-    <td>최근 수정된 날짜: ${u.getEditdate()} <br></td>
 </tr>
 </body>
 </html>
