@@ -8,6 +8,7 @@ public class UserServiceImpl {
     @Autowired
     UserDAO userDAO;
     public UserVO getUser(UserVO vo) {
+        System.out.println("ServiceImpl - "+vo.getUserid());
         return userDAO.getUser(vo);
     }
 }

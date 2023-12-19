@@ -39,11 +39,13 @@ public class BoardController {
     public String editPost(@PathVariable("id") int id, Model model) {
         BoardVO boardVO = boardService.getBoard(id);
         model.addAttribute("u", boardVO);
+        System.out.println("itemID : "+ boardVO.getItemID());
         return "editform";
     }
 
     @RequestMapping(value = "/editok", method = RequestMethod.POST)
     public  String editPostOK(BoardVO vo) {
+        System.out.println("editok/id:"+vo.getItemID());
         if(boardService.updateBoard(vo) == 0)
             System.out.println("데이터 수정 실패 ");
         else
